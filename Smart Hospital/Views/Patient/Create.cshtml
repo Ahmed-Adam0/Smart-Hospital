@@ -1,0 +1,39 @@
+﻿@model Patient
+
+@{
+    ViewData["Title"] = "patient";
+}
+
+<div class="card bg-light">
+    <form method="post">
+  <div class="card-body">
+        <div class="mb-2 w-25">
+            <label for="exampleFormControlInput1" class="form-label">full Name</label>
+            <input type="text" asp-for="Name" class="form-control" id="exampleFormControlInput1" placeholder="enter your name">
+        <span class="text-danger m-3 p-3" asp-validation-for="Name"></span>
+        </div>
+        <div class="mb-2 w-25">
+            <label for="exampleFormControlInput1" class="form-label">Birthday</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="enter your bithday">
+        </div>
+        <div class="mb-2 w-25">
+            <label for="exampleFormControlInput1" class="form-label">Address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="enter your address">
+        </div>
+        <div class="mb-2 w-25">
+            <label for="exampleFormControlInput1" class="form-label">Phone</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="enter your phone">
+        </div>
+         <div class="mb-2 w-25">
+            <label for="exampleFormControlInput1" class="form-label">Email </label>
+            <input type="text"asp-for="Email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+       <button class="btn btn-primary" asp-action="Create">Save</button>
+  </div>
+    </form>
+</div>
+@section Scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+
