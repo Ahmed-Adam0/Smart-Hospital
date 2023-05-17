@@ -16,8 +16,7 @@ namespace Smart_Hospital.Models
         [ForeignKey("address")]
         public int AddressId { get; set; }
 
-        [RegularExpression(@"^01[0-2|5]\\d{1,8}$",ErrorMessage ="Please input a valid number!")]
-        public string Phone { get; set; }
+      public string Phone { get; set; }
 
         
         public string Email { get; set; }
