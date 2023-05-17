@@ -6,30 +6,53 @@
 
 <div class="card bg-light">
     <form method="post">
-  <div class="card-body">
-        <div class="mb-2 w-25">
-            <label for="exampleFormControlInput1" class="form-label">full Name</label>
-            <input type="text" asp-for="Name" class="form-control" id="exampleFormControlInput1" placeholder="enter your name">
-        <span class="text-danger m-3 p-3" asp-validation-for="Name"></span>
+        <div class="card-body">
+            <h3 class="mb-1 pb-1">Info</h3>
+            <div class="w-25">
+                <input type="text" asp-for="Name" class="form-control" id="exampleFormControlInput1" placeholder="FullName">
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+            <div class="w-25">
+                <label for="exampleFormControlInput1" class="form-label"></label>
+                <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Bithday">
+                <span class="text-danger" asp-validation-for="BirthDate"></span>
+            </div>
+
+            <div class="w-25">
+                <label for="exampleFormControlInput1" class="form-label"></label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Phone">
+                <span class="text-danger" asp-validation-for="Phone"></span>
+            </div>
+
+            <div class="w-25">
+                <label for="exampleFormControlInput1" class="form-label"></label>
+                <input type="text" asp-for="Email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <span class="text-danger" asp-validation-for="Email"></span>
+            </div>
+
+            <div class="row">
+                <h3>Address</h3>
+                <div class="mb-2 w-25 col-md-6">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Zip">
+                    <span class="text-danger" asp-validation-for="address.Zip"></span>
+                </div>
+                <div class="mb-2 w-25 col-md-6">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="City">
+                    <span class="text-danger" asp-validation-for="address.City"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-2 w-25 col-md-6">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Street">
+                    <span class="text-danger" asp-validation-for="address.Street"></span>
+                </div>
+                <div class="mb-2 w-25 col-md-6">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Governorate">
+                    <span class="text-danger" asp-validation-for="address.Governorate"></span>
+                </div>
+            </div>
+            <button class="btn btn-primary" asp-action="Create">Save</button>
         </div>
-        <div class="mb-2 w-25">
-            <label for="exampleFormControlInput1" class="form-label">Birthday</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="enter your bithday">
-        </div>
-        <div class="mb-2 w-25">
-            <label for="exampleFormControlInput1" class="form-label">Address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="enter your address">
-        </div>
-        <div class="mb-2 w-25">
-            <label for="exampleFormControlInput1" class="form-label">Phone</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="enter your phone">
-        </div>
-         <div class="mb-2 w-25">
-            <label for="exampleFormControlInput1" class="form-label">Email </label>
-            <input type="text"asp-for="Email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-       <button class="btn btn-primary" asp-action="Create">Save</button>
-  </div>
     </form>
 </div>
 @section Scripts{
